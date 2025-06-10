@@ -29,7 +29,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-300 via-white to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
+    <div className="min-h-screen bg-gradient-to-b from-sky-300 via-white to-white dark:from-black dark:via-[#0e7490] dark:to-[#1e293b]">
 
       {/* Header */}
       <header className="container mx-auto px-6 py-4">
@@ -101,19 +101,22 @@ export default function Home() {
           </h2>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {features.map((feature, index) => (
-              <Card key={index} className="group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
-                    <feature.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <Card
+  key={index}
+  className="group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 
+             bg-sky-50 dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700"
+>
+  <CardContent className="p-6 text-center">
+    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
+      <feature.icon className="h-6 w-6" />
+    </div>
+    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+      {feature.title}
+    </h3>
+    <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+  </CardContent>
+</Card>
+
             ))}
           </div>
         </div>

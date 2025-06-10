@@ -51,7 +51,7 @@ export default function Dashboard() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {cards.map((card, index) => (
-          <Card key={index} className="group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card key={index} className="group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white/80 dark:bg-[#1f2937]/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
                 {card.title}
