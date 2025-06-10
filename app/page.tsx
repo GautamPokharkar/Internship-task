@@ -13,8 +13,8 @@ export default function Home() {
   const features = [
     {
       icon: Shield,
-      title: 'Secure Authentication',
-      description: 'Industry-standard security with encrypted data storage.',
+      title: 'Advance Voice Intellegence',
+      description: 'Powered by real-time voice AI and natural language tech.',
     },
     {
       icon: Users,
@@ -29,7 +29,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-sky-300 via-white to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
+
       {/* Header */}
       <header className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -57,12 +58,14 @@ export default function Home() {
       <main className="container mx-auto px-6 py-20">
         <div className="text-center">
           <h1 className="text-5xl font-bold leading-tight text-gray-900 dark:text-white">
-            Secure Authentication
-            <span className="block text-primary">Made Simple</span>
+            Next generation 
+            <span className="block text-primary">Vocie Technology</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600 dark:text-gray-300">
-            Experience seamless user authentication with advanced features, 
-            intuitive dashboard, and powerful configuration options.
+            What if your voice agent could smile?<br></br>
+            Ours does—with tone, timing, and empathy built in.
+
+
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

@@ -9,12 +9,16 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Eye, EyeOff, Save, User, Mail, Phone } from 'lucide-react';
 
+
+
 export default function Profile() {
   const { user, updateUser } = useAuth();
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  
+
 
   useEffect(() => {
   if (message) {
@@ -49,7 +53,7 @@ export default function Profile() {
     setIsLoading(true);
     setMessage(null);
 
-    // Validate password change if new password is provided
+    
     if (formData.newPassword) {
       if (formData.newPassword !== formData.confirmPassword) {
         setMessage({ type: 'error', text: 'New passwords do not match.' });
@@ -74,7 +78,7 @@ export default function Profile() {
     if (success) {
       setMessage({ type: 'success', text: 'Profile updated successfully!' });
       setIsEditing(false);
-      // Reset password fields
+      
       setFormData(prev => ({
         ...prev,
         currentPassword: '',
