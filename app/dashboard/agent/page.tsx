@@ -46,7 +46,7 @@ export default function Agent() {
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  // Load STT data from JSON file
+  
   useEffect(() => {
     const loadSTTData = async () => {
       try {
@@ -133,8 +133,8 @@ export default function Agent() {
       setSavedConfig(config);
       setMessage({ type: 'success', text: 'Configuration saved successfully!' });
       
-      // Clear message after 3 seconds
-      setTimeout(() => setMessage(null), 3000);
+      
+      setTimeout(() => setMessage(null), 2000);
     } catch (error) {
       setMessage({ type: 'error', text: 'Failed to save configuration.' });
     }
@@ -275,8 +275,8 @@ export default function Agent() {
             {message && (
               <div className={`p-3 rounded-md text-sm ${
                 message.type === 'success' 
-                  ? 'bg-green-50 text-green-700 border border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800' 
-                  : 'bg-red-50 text-red-700 border border-red-200 dark:bg-red-900/20 dark:text-red-400 dark:border-red-800'
+                  ? 'bg-green-100 text-green-800 border border-green-300 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800' 
+                  : 'bg-red-100 text-red-700 border border-red-200 dark:bg-red-900/20 dark:text-red-400 dark:border-red-800'
               }`}>
                 {message.text}
               </div>
@@ -339,7 +339,7 @@ export default function Agent() {
                 </div>
 
                 {isConfigChanged() && (
-                  <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md dark:bg-yellow-900/20 dark:border-yellow-800">
+                  <div className="mt-4 p-3 bg-yellow-50 text-yellow-100 border border-yellow-200 rounded-md dark:bg-yellow-900/20 dark:border-yellow-800">
                     <p className="text-sm text-yellow-700 dark:text-yellow-400">
                       Configuration has unsaved changes. Click "Save Configuration" to persist these settings.
                     </p>
@@ -347,7 +347,7 @@ export default function Agent() {
                 )}
 
                 {savedConfig && !isConfigChanged() && (
-                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md dark:bg-green-900/20 dark:border-green-800">
+                  <div className="mt-4 p-3 bg-green-100 text-green-800 border border-green-300 rounded-md dark:bg-green-900/20 dark:border-green-800">
                     <p className="text-sm text-green-700 dark:text-green-400">
                       Configuration saved and ready to use.
                     </p>
